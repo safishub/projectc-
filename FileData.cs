@@ -4,7 +4,8 @@ using System.Text.Json;
 namespace NotesAPP
 {
     public class JsonBase64FileData
-    { 
+    {
+        // Serialize and decode the object to JSON
         public void SaveToFile<T>(T data, string path)
         {
             string json = JsonSerializer.Serialize(data);
@@ -14,7 +15,7 @@ namespace NotesAPP
             File.WriteAllText(path, base64);
         }
 
-        
+        // Deserialize and decode JSON to an object
         public T LoadFromFile<T>(string path)
         {
             string base64 = File.ReadAllText(path);
