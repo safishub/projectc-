@@ -8,7 +8,6 @@
         public string content { get; set; }
         public bool isNotificated { get; set; } = false;
 
-        // Compare notes by category and title
         public int CompareTo(Note? note)
         {
             if (note is null) throw new ArgumentException("Incorrect compare");
